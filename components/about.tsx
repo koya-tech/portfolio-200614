@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { HTMLAttributes } from "react";
 import { GithubLogo, LinkedinLogo } from "./icons";
+import { githubUrl, linkedinUrl } from "@/const/urls";
 
 const About = () => {
   return (
@@ -34,7 +35,7 @@ const About = () => {
             <div className="flex flex-wrap gap-4 justify-start">
               <Button
                 className="rounded-full"
-                onClick={() => window.open("https://github.com/koya-tech", "_blank")}
+                onClick={() => window.open(githubUrl, "_blank")}
               >
                 <GithubLogo />
                 View Github
@@ -42,7 +43,7 @@ const About = () => {
               <Button
                 className="rounded-full"
                 onClick={() =>
-                  window.open("https://www.linkedin.com/in/koya-hiura-9aa75b31a/", "_blank")
+                  window.open(linkedinUrl, "_blank")
                 }
               >
                 <LinkedinLogo />
