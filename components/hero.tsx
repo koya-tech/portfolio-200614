@@ -25,7 +25,7 @@ const Hero = () => {
           Building Scalable & Engaging Web Experiences
         </h1>
         <p className="mt-6 text-[17px] md:text-lg">
-          Hey there! I&apos;m a John Doe, a Full Stack Developer who loves
+          Hey there! I&apos;m a Koya, a Full Stack Developer who loves
           building cool and scalable web experiences. From crafting beautiful
           frontends to powering robust backends, I bring ideas to life with
           clean code and great design. Let&apos;s create something amazing

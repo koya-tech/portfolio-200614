@@ -78,40 +78,32 @@ const ProjectCard = ({
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description:
-        "A full-featured e-commerce platform with real-time inventory management, payment processing, and admin dashboard.",
-      image: "/placeholder.svg",
-      technologies: ["Next.js", "TypeScript", "Stripe", "Prisma", "PostgreSQL"],
-      liveUrl: "https://ecommerce-demo.com",
-      githubUrl: "https://github.com/username/ecommerce",
+      title: "InsightX (like NotebookLM App)",
+      description: "A LLM application that allows users to upload files and ask questions about them.",
+      image: "/insightx.png",
+      technologies: ["LLM", "AI", "Chatbot", "RAG", "NestJS"],
+      githubUrl: "https://github.com/koya-tech/InsightX",
     },
     {
-      title: "AI Task Manager",
-      description:
-        "Smart task management app that uses AI to categorize, prioritize, and suggest optimal task scheduling.",
-      image: "/placeholder.svg",
-      technologies: ["React", "Python", "TensorFlow", "FastAPI", "MongoDB"],
-      liveUrl: "https://ai-taskmanager.com",
-      githubUrl: "https://github.com/username/ai-taskmanager",
+      title: "DDD-EateryAPP",
+      description: "Discover and Share Eatery",
+      image: "/eatery.png",
+      technologies: ["DDD", "React", "Tailwind CSS", "TypeScript"],
+      githubUrl: "https://github.com/koya-tech/DDD-EateryAPP",
     },
     {
-      title: "Real-time Chat Application",
-      description:
-        "Feature-rich chat application with real-time messaging, file sharing, and video calls.",
-      image: "/placeholder.svg",
-      technologies: ["React", "Socket.io", "WebRTC", "Node.js", "Redis"],
-      liveUrl: "https://chatapp-demo.com",
-      githubUrl: "https://github.com/username/chat-app",
+      title: "Prime Video Clone APP",
+      description: "Access to the Movie and TV Infomation",
+      image: "/prime-clone-1.png",
+      technologies: ["React", "Tailwind CSS"],
+      githubUrl: "https://github.com/koya-tech/PrimeVideo-Clone",
     },
     {
-      title: "AI Image Generator",
-      description:
-        "An AI image generator that uses a model to generate images based on a prompt.",
-      image: "/placeholder.svg",
-      technologies: ["React", "Next.js", "Tailwind CSS", "Shadcn UI"],
-      liveUrl: "https://ai-image-generator.com",
-      githubUrl: "https://github.com/username/ai-image-generator",
+      title: "Simple Shop dApps",
+      description: "simple dapps that records users' purchase history on the blockchain and allows administrators to view the purchase history",
+      image: "/Screenshot.png",
+      technologies: ["Solidity", "BlockChain", "Next.js"],
+      githubUrl: "https://github.com/koya-tech/simple-shop-dapps",
     },
   ];
 
