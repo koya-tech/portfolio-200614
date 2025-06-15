@@ -1,6 +1,6 @@
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
-import { BlueSkyLogo, DribbleLogo, GithubLogo, LinkedinLogo, XLogo } from "./icons";
+import { GithubLogo, LinkedinLogo } from "./icons";
 import { githubUrl, linkedinUrl } from "@/const/urls";
 import { Logo } from "./navbar/logo";
 
