@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Building2, Calendar } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface ExperienceItemProps {
   title: string;
@@ -9,6 +10,7 @@ interface ExperienceItemProps {
   description: string;
   technologies: string[];
   img: string;
+  relatedLink?: string;
 }
 
 const ExperienceItem = ({
@@ -18,6 +20,7 @@ const ExperienceItem = ({
   description,
   technologies,
   img,
+  relatedLink,
 }: ExperienceItemProps) => {
   return (
     <div className="relative pl-8 not-last:pb-12">
@@ -42,7 +45,15 @@ const ExperienceItem = ({
             <span>{period}</span>
           </div>
         </div>
-        <p className="text-muted-foreground">{description}</p>
+        <p className="text-muted-foreground">
+          {description}
+          <br />
+          {relatedLink && (
+            <Link href={relatedLink} target="_blank" className="text-sm text-muted-foreground">
+              Academic Paper : {relatedLink}
+            </Link>
+          )}
+        </p>
         <div className="flex flex-wrap gap-2">
           {technologies.map((tech) => (
             <Badge key={tech} variant="secondary" className="rounded-full">
@@ -84,6 +95,23 @@ const Experience = () => {
       technologies: ["React", "Typescript", "Node.js", "Java", "PostgreSQL", "Docker", "API", "Quarkus", "JUnit", "Mockito", "Jest"],
       img: "/japan.png",
     },
+    {
+      title: "Student (MASTER of Science)",
+      company: "University of Tokyo",
+      period: "April 2020 · March 2022",
+      description: "Research theme is 'Three-dimensional hand guidance by midair haptic display'. Proposed a method of guidance to an arbitrary 3D location using ultrasonic tactile sensation for visually impaired people and in situations where visibility is poor.",
+      technologies: [],
+      img: "/japan.png",
+      relatedLink: "https://www.u-tokyo.ac.jp/en/education/master/index.html",
+    },
+    {
+      title: "Student (BACHELOR of Engineering)",
+      company: "Kyushu University",
+      period: "April 2016 · March 2020",
+      description: "Studied mechanical engineering, especially marine engineering. Research theme was on the application of image recognition technology using Machine Learning to the factory(the content of this research was undisclosed because it was conducted in collaboration with a company). Experienced in design drawing and simulation of large offshore structures.",
+      technologies: [],
+      img: "/japan.png",
+    },
   ];
 
   return (
@@ -103,7 +131,12 @@ const Experience = () => {
 
         <div className="relative">
           {experiences.map((experience, index) => (
-            <ExperienceItem key={index} {...experience} />
+            <div key={index}>
+              {experience.title === "Student (MASTER of Science)" && (
+                <hr className="my-8 border-t-2 border-muted" />
+              )}
+              <ExperienceItem key={index} {...experience} />
+            </div>
           ))}
         </div>
       </div>
