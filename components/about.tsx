@@ -1,10 +1,11 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Download } from "lucide-react";
 import Image from "next/image";
 import { HTMLAttributes } from "react";
-import { GithubLogo } from "./icons";
+import { GithubLogo, LinkedinLogo } from "./icons";
 
 const About = () => {
   return (
@@ -23,7 +24,7 @@ const About = () => {
               Passionate about creating impactful web experiences
             </h2>
             <p className="text-muted-foreground mb-6 text-justify">
-              With over 5 years of experience in full-stack development, I
+              With about 3 years of experience in full-stack development, I
               specialize in building scalable web applications using modern
               technologies. My expertise includes React, Node.js, and cloud
               architecture. I&apos;m passionate about creating elegant solutions
@@ -31,13 +32,21 @@ const About = () => {
               community.
             </p>
             <div className="flex flex-wrap gap-4 justify-start">
-              <Button className="rounded-full">
+              <Button
+                className="rounded-full"
+                onClick={() => window.open("https://github.com/koya-tech", "_blank")}
+              >
                 <GithubLogo />
                 View Github
               </Button>
-              <Button variant="outline" className="rounded-full">
-                <Download />
-                Download CV
+              <Button
+                className="rounded-full"
+                onClick={() =>
+                  window.open("https://www.linkedin.com/in/koya-hiura-9aa75b31a/", "_blank")
+                }
+              >
+                <LinkedinLogo />
+                View LinkedIn
               </Button>
             </div>
           </div>
@@ -53,7 +62,7 @@ const ProfileImage = ({
 }: HTMLAttributes<HTMLDivElement>) => (
   <div className={cn("mt-10 w-48 h-48 md:w-64 md:h-64", className)} {...props}>
     <div className="relative w-full h-full rounded-2xl overflow-hidden bg-accent">
-      <Image src="/placeholder.svg" alt="" className="object-cover" fill />
+      <Image src="/back-portfolio.jpg" alt="" className="object-cover" fill />
     </div>
   </div>
 );
