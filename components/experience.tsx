@@ -1,5 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Building2, Calendar } from "lucide-react";
+import Image from "next/image";
 
 interface ExperienceItemProps {
   title: string;
@@ -7,6 +8,7 @@ interface ExperienceItemProps {
   period: string;
   description: string;
   technologies: string[];
+  img: string;
 }
 
 const ExperienceItem = ({
@@ -15,6 +17,7 @@ const ExperienceItem = ({
   period,
   description,
   technologies,
+  img,
 }: ExperienceItemProps) => {
   return (
     <div className="relative pl-8 not-last:pb-12">
@@ -27,7 +30,8 @@ const ExperienceItem = ({
       <div className="space-y-3">
         <div className="flex items-center gap-3">
           <div className="flex-shrink-0 size-9 bg-accent rounded-full flex items-center justify-center">
-            <Building2 className="size-5 text-muted-foreground" />
+            {/* <Building2 className="size-5 text-muted-foreground" /> */}
+            <Image src={img} alt="Common Thread Collective" width={36} height={36} />
           </div>
           <span className="text-lg font-semibold">{company}</span>
         </div>
@@ -54,28 +58,31 @@ const ExperienceItem = ({
 const Experience = () => {
   const experiences = [
     {
-      title: "Senior Full Stack Developer",
-      company: "TechCorp Solutions",
-      period: "2021 - Present",
+      title: "Back-end Developer",
+      company: "Common Thread Collective",
+      period: "2025/05 - Present",
       description:
-        "Led the development of enterprise-scale web applications, mentored junior developers, and implemented best practices for code quality and performance optimization.",
-      technologies: ["React", "Node.js", "TypeScript", "AWS", "MongoDB"],
+        "Participated in a project for E-commerce platform development, focusing on backend development using Node.js and AWS. Optimized the application performance and scalability in Cloud Architecture and improve the application by debugging and refactoring.",
+      technologies: ["Typescript", "Node.js", "AWS", "PostgreSQL", "API"],
+      img: "/usa.png",
     },
     {
       title: "Full Stack Developer",
-      company: "Digital Innovations Inc",
-      period: "2019 - 2021",
+      company: "Anycloud, Ltd.",
+      period: "2025/01 - 2025/04",
       description:
-        "Developed and maintained multiple client projects, implemented responsive designs, and integrated third-party APIs for enhanced functionality.",
-      technologies: ["React", "Express.js", "PostgreSQL", "Docker", "Redis"],
+        "Developed and maintained client projects, implemented responsive designs, and integrated third-party APIs for enhanced functionality.",
+      technologies: ["React", "Next.js", "PostgreSQL", "Supabase", "Docker", "API", "TailwindCSS"],
+      img: "/japan.png",
     },
     {
-      title: "Frontend Developer",
-      company: "WebTech Studios",
-      period: "2018 - 2019",
+      title: "Full Stack Developer",
+      company: "Hitachi, Ltd.",
+      period: "2022/04 - 2024/08",
       description:
-        "Created responsive and interactive user interfaces, collaborated with designers, and optimized application performance.",
-      technologies: ["React", "JavaScript", "SASS", "Webpack", "Jest"],
+        "Developed management software applications for hardware products. Experienced in Scrum and Agile development methods. Experienced a wide range of front-end, back-end, and testing processes. Also participated in a generative AI project.",
+      technologies: ["React", "Typescript", "Node.js", "Java", "PostgreSQL", "Docker", "API", "Quarkus", "JUnit", "Mockito", "Jest"],
+      img: "/japan.png",
     },
   ];
 
