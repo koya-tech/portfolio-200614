@@ -1,8 +1,11 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { GithubLogo, XLogo } from "../icons";
 import { Logo } from "./logo";
 import { NavMenu } from "./nav-menu";
 import { NavigationSheet } from "./navigation-sheet";
+import { githubUrl, xUrl } from "@/const/urls";
 
 const Navbar = () => {
   return (
@@ -18,6 +21,9 @@ const Navbar = () => {
             variant="outline"
             className="hidden sm:inline-flex rounded-full shadow-none"
             size="icon"
+            onClick={() => {
+              window.open(xUrl, "_blank");
+            }}
           >
             <XLogo />
           </Button>
@@ -25,6 +31,9 @@ const Navbar = () => {
             variant="outline"
             className="rounded-full shadow-none"
             size="icon"
+            onClick={() => {
+              window.open(githubUrl, "_blank");
+            }}
           >
             <GithubLogo className="h-5! w-5!" />
           </Button>
